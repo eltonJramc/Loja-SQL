@@ -1,4 +1,4 @@
--- Informações (Cliente)
+-- Informações Clientes.
 CREATE TABLE clientes (
     id_cliente INT PRIMARY KEY,
     nome VARCHAR(100),
@@ -60,7 +60,7 @@ VALUES
 (7, 'Renata Martins', 'Designer', 3500.00),
 (8, 'Lucas Tavares', 'Marketing', 4000.00);
 
--- Informações Vendas
+-- Informações Vendas.
 CREATE TABLE vendas (
     id_venda INT PRIMARY KEY,
     id_cliente INT,
@@ -149,11 +149,11 @@ VALUES
 (14, 14, 14, 5, 'Meias de ótima qualidade, super recomendo.'),
 (15, 15, 15, 4, 'Bolsa prática para usar na praia.');
 
--- Alteraração de tabelas.
+-- Alteraração de Tabelas.
 ALTER TABLE produtos ADD descricao VARCHAR(255) NULL;
 ALTER TABLE funcionarios ADD departamento VARCHAR(100);
 
--- Atualização de registros. 
+-- Atualização de Registros. 
 UPDATE funcionarios
 SET departamento = CASE
     WHEN id_funcionario IN (1, 4) THEN 'Gerência'
@@ -163,7 +163,7 @@ SET departamento = CASE
     ELSE 'Outros'
 END;
 
--- Seleção de tabelas.
+-- Seleção de Tabelas.
 SELECT * FROM avaliacoes;
 SELECT * FROM clientes;
 SELECT * FROM eventos;
